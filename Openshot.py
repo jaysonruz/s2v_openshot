@@ -11,7 +11,7 @@ class OpenshotProject:
   def __init__(self,project_name="default_name"):
     self.CLOUD_URL = config['CLOUD_URL']
     self.CLOUD_AUTH = HTTPBasicAuth(config['CLOUD_AUTH_USER'],config['CLOUD_AUTH_PWD'])
-    print(config)
+    # print(config)
 
     ########################################################
     # Create new project
