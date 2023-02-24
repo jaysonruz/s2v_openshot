@@ -10,8 +10,12 @@ from assets_handler import search_with_mindura_dwnld
 from useful_functions import keyword_extractor,python_audio_generator
 from Monclip import monClip
 from Openshot import OpenshotProject
+import time
 
-brief = "This all encompassing experience wore off for a moment and in that moment, my awareness came gasping to the surface of the hallucination "
+start_time = time.time()
+
+# Your code here
+brief = """Gotham City was once again shrouded in darkness. But, in the shadows lurked a figure, silently watching over the city. He was Batman, the Dark Knight of Gotham. He moved with a quiet grace, ready to pounce on any criminal who dared to disturb the peace. Batman's fearlessness struck fear into the hearts of those who sought to do evil. No one knew the true identity of the Caped Crusader, but everyone knew that they were safe with him around. As dawn broke over the city, Batman retreated to his lair, ready to face another night of fighting crime."""
 output_of_keyword_extractor=keyword_extractor(brief)
 # print("DEBUG: keywords: ",output_of_keyword_extractor)
 meta_list=[]
@@ -39,22 +43,30 @@ for e in meta_list:
     myclips.append(clip)
 
 # instantiating project in openshot
-openshot = OpenshotProject(project_name="hallucination2")
+print("DEBUG: instantiating project!") 
+openshot = OpenshotProject(project_name="dark Knight rises")
+
+print("DEBUG: uploading files and creating clips!") 
 position=0.0
 for clip in myclips:
     print(position)
-    print(clip.sentence,"\n")
+    print(clip.sentence,"\n\n")
     # openshot uploade media + create clips of it
     openshot.Upload_clip_to_project(clip.asset,position=position,start=clip.start,end=clip.end,layer=2)
     # openshot uploade audio  + create clips of it
     openshot.Upload_clip_to_project(clip.tts,position=position,start=clip.start,end=clip.end,layer=1)
     position+=clip.duration
-    position+=0.2 # buffer
-    
+    # position+=0.1 # buffer
+
+print("DEBUG: Beginning with export of project!")    
 # export and get url
 export_url = openshot.export()
 print(export_url)
 
 # download video from url
 urllib.request.urlretrieve(export_url, 'video_output.mp4')
-    
+end_time = time.time()
+
+total_time = end_time - start_time
+
+print("Execution time: {:.2f} seconds".format(total_time))    
