@@ -4,6 +4,7 @@ import time
 import spacy
 import pytextrank
 import pandas as pd
+from assets_handler import search_with_mindura_dwnld
 # import deplacy
 
 def keyword_extractor(text):
@@ -100,7 +101,7 @@ def python_audio_generator(sentence, file_name):
     meta["file_name"]=file_name
     meta["audio_file_path"]=audio_file_path
     meta["audio_length"]=audio_length
-    print(file_name," Audio length in seconds:", audio_length)
+    # print(file_name," Audio length in seconds:", audio_length)
     return meta
     
 def get_audio_length(file_path):
@@ -114,11 +115,26 @@ def get_audio_length(file_path):
 if __name__ =="__main__":
     brief = "This all encompassing experience wore off for a moment and in that moment, my awareness came gasping to the surface of the hallucination and I was able to consider momentarily that I had killed myself by taking an outrageous dose of an online drug and this was the most pathetic death experience of all time. They decided to settle the argument with a race. They agreed on a route and started off the race. The rabbit shot ahead and ran briskly for some time. Then seeing that he was far ahead of the tortoise, he thought he'd sit under a tree for some time and relax beforecontinuing the race. "
     output_of_keyword_extractor=keyword_extractor(brief)
-    print("DEBUG: keywords: ",output_of_keyword_extractor)
-    tts_list=[]
+    # print("DEBUG: keywords: ",output_of_keyword_extractor)
+    meta_list=[]
     for i,l in enumerate(output_of_keyword_extractor):
-        sentence=l["sentence"]    
+        sentence=l["sentence"]
+        keyword1 = l["keyword1"]
+        keyword2 = l["keyword2"]      
         tts_dict=python_audio_generator(sentence,f"speech_{i}")
-        tts_list.append(tts_dict)
-    print("DEBUG: tss_meta_list: ",tts_list)
+        tts_dict['keyword1']=keyword1
+        tts_dict['keyword2']=keyword2
+        meta_list.append(tts_dict)
+    # print("DEBUG: tss_meta_list: ",meta_list)
+    for e in meta_list:
+        asset_file = search_with_mindura_dwnld(e["keyword1"],min_duration=10)
+        if asset_file is None:
+            asset_file = search_with_mindura_dwnld(e["keyword2"],min_duration=10)
+        if asset_file is None:
+            raise Exception("DEBUG : no video found for both keywords!")
+        e["asset"]=asset_file
+        print(f"DEBUG: META --> {e} \n")
+        # download_video(asset_file["url"],"media_assets")
+    # from Monclip import monClip
     
+    # clip = monClip(sentence, keyword, tts_path, asset_path, duration, layer)
