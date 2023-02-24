@@ -7,7 +7,22 @@ from dotenv import load_dotenv
 from dotenv import dotenv_values
 config = dotenv_values(".env")
 
+class monClip:
+  """_summary_
+  """
+  def __init__(self,sentence,keyword,tts_path,asset_path,duration,layer):
+    self.sentence = sentence
+    self.keyword = keyword
+    self.tts = tts_path
+    self.asset = asset_path
+    self.duration = duration
+    self.start = 0.0
+    self.end = self.duration
+    self.layer = layer
+
 class OpenshotProject:
+  """_summary_
+  """
   def __init__(self,project_name="default_name"):
     self.CLOUD_URL = config['CLOUD_URL']
     self.CLOUD_AUTH = HTTPBasicAuth(config['CLOUD_AUTH_USER'],config['CLOUD_AUTH_PWD'])

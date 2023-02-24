@@ -6,11 +6,6 @@ import pytextrank
 import pandas as pd
 # import deplacy
 
-
-
-
-
-
 def keyword_extractor(text):
     nlp = spacy.load('en_core_web_sm')
 
@@ -80,15 +75,39 @@ def keyword_extractor(text):
                     
     return ordered_queries
 
-def python_audio_generator(sentence,file_name):
-    #Make a folder named 'audio'
-    if not os.path.exists("tts_folder"):
-        os.mkdir("tts_folder")
-    engine = pyttsx3.init()
-    engine.save_to_file(sentence, f'tts_folder/{file_name}.mp3')
-    engine.runAndWait()
-        
+def python_audio_generator(sentence, file_name):
+    """
+    takes sentence and returns its tts audio file in mp3 format in audio directory 
+    and returns meta information about the same.
 
+    Args:
+        sentence (String): Description of the first argument.
+        file_name (String): Description of the second argument.
+
+    Returns:
+        meta (Dictionary): meta information of audio file generated
+    """
+    meta={}
+    # Make a folder named 'audio'
+    if not os.path.exists("audio"):
+        os.mkdir("audio")
+    engine = pyttsx3.init()
+    engine.save_to_file(sentence, os.path.join("audio", file_name + ".mp3"))
+    engine.runAndWait()
+    audio_file_path = os.path.join("audio", file_name + ".mp3")
+    audio_length = get_audio_length(audio_file_path)
+    # creating a meta information dict 
+    meta["file_name"]=file_name
+    meta["audio_file_path"]=audio_file_path
+    meta["audio_length"]=audio_length
+    print(file_name," Audio length in seconds:", audio_length)
+    return meta
+    
+def get_audio_length(file_path):
+    # Use a package like pydub to get the audio length
+    from pydub import AudioSegment
+    audio = AudioSegment.from_file(file_path)
+    return round(audio.duration_seconds,2)
 
 
 
@@ -96,6 +115,10 @@ if __name__ =="__main__":
     brief = "This all encompassing experience wore off for a moment and in that moment, my awareness came gasping to the surface of the hallucination and I was able to consider momentarily that I had killed myself by taking an outrageous dose of an online drug and this was the most pathetic death experience of all time. They decided to settle the argument with a race. They agreed on a route and started off the race. The rabbit shot ahead and ran briskly for some time. Then seeing that he was far ahead of the tortoise, he thought he'd sit under a tree for some time and relax beforecontinuing the race. "
     output_of_keyword_extractor=keyword_extractor(brief)
     print("DEBUG: keywords: ",output_of_keyword_extractor)
+    tts_list=[]
     for i,l in enumerate(output_of_keyword_extractor):
         sentence=l["sentence"]    
-        python_audio_generator(sentence,f"speech_{i}")
+        tts_dict=python_audio_generator(sentence,f"speech_{i}")
+        tts_list.append(tts_dict)
+    print("DEBUG: tss_meta_list: ",tts_list)
+    
