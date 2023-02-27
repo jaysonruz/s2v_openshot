@@ -26,14 +26,16 @@ def Submit(brief):
         tts_dict['keyword2']=keyword2
         tts_dict['sentence']=sentence
         meta_list.append(tts_dict)
-    # print("DEBUG: tss_meta_list: ",meta_list)
+    print("DEBUG: tss_meta_list: ",meta_list)
     myclips = []
     for e in meta_list:
-        asset_file = search_with_mindura_dwnld(e["keyword1"],min_duration=10)
+        asset_file = search_with_mindura_dwnld(e["keyword1"],min_duration=e['audio_length'])
         if asset_file is None:
-            asset_file = search_with_mindura_dwnld(e["keyword2"],min_duration=10)
+            asset_file = search_with_mindura_dwnld(e["keyword2"],min_duration=e['audio_length'])
         if asset_file is None:
-            raise Exception(f"DEBUG : no video found for both keywords! --> {e['keyword1']},{e['keyword2']}")
+            asset_file = search_with_mindura_dwnld(e["sentence"],min_duration=e['audio_length'])
+        if asset_file is None:
+            raise Exception(f"DEBUG : no video found for both keywords! and sentence --> {e['keyword1']},{e['keyword2']}, :: {e['sentence']}")
         e["asset"]=asset_file
         print(f"DEBUG: META --> {e} \n")
     
@@ -75,4 +77,4 @@ if __name__ == "__main__":
     brief = """Gotham City was once again shrouded in darkness. But, in the shadows lurked a figure, silently watching over the city. He was Batman, the Dark Knight of Gotham. He moved with a quiet grace, ready to pounce on any criminal who dared to disturb the peace. Batman's fearlessness struck fear into the hearts of those who sought to do evil. No one knew the true identity of the Caped Crusader, but everyone knew that they were safe with him around. As dawn broke over the city, Batman retreated to his lair, ready to face another night of fighting crime."""
     brief_breaks = "They met in a crowded cafe. She spilled coffee on his shirt, and he couldn't stop staring at her smile. A year later, they exchanged vows on the same cafe patio, surrounded by the same people who witnessed their awkward first encounter. From that day on ,they both  knew their love was as sweet and simple as the espresso they shared that fateful day."
     brief_keyword_issue = "They met by chance, eyes locking in a crowded cafe. She spilled her coffee, he helped her clean it up. Days turned into nights, and soon they were inseparable. They laughed, cried, loved. He proposed on a rooftop at sunset, and they lived happily ever after."
-    Submit(brief)
+    Submit(brief_breaks)

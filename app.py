@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import os
 import numpy as np
 from main import Submit
+from werkzeug.serving import ThreadedWSGIServer
+
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
@@ -20,4 +22,6 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Use a threaded WSGI server for multiple threads
+    http_server = ThreadedWSGIServer('', 5000, app)
+    http_server.serve_forever()
