@@ -14,6 +14,7 @@ import time
 # from nlp_keyword_extractor import nlp_keyword_extractor
 # Your code here
 def Submit(brief):
+    code_start_time = time.time()
     output_of_keyword_extractor=keyword_extractor(brief)
     # print("DEBUG: keywords: ",output_of_keyword_extractor)
     meta_list=[]
@@ -29,11 +30,13 @@ def Submit(brief):
     print("DEBUG: tss_meta_list: ",meta_list)
     myclips = []
     for e in meta_list:
-        asset_file = search_with_mindura_dwnld(e["keyword1"],min_duration=e['audio_length'])
+        asset_file = search_with_mindura_dwnld(e["sentence"],min_duration=e['audio_length'])
+        if asset_file is None:
+            asset_file = search_with_mindura_dwnld(e["keyword1"]+" "+e["keyword2"],min_duration=e['audio_length'])
+        if asset_file is None:
+            asset_file = search_with_mindura_dwnld(e["keyword1"],min_duration=e['audio_length'])
         if asset_file is None:
             asset_file = search_with_mindura_dwnld(e["keyword2"],min_duration=e['audio_length'])
-        if asset_file is None:
-            asset_file = search_with_mindura_dwnld(e["sentence"],min_duration=e['audio_length'])
         if asset_file is None:
             raise Exception(f"DEBUG : no video found for both keywords! and sentence --> {e['keyword1']},{e['keyword2']}, :: {e['sentence']}")
         e["asset"]=asset_file
@@ -41,7 +44,10 @@ def Submit(brief):
     
         clip = monClip(e["sentence"], e["asset"]["keyword"], e["audio_file_path"], e["asset"]["file_path"], e["audio_length"])
         myclips.append(clip)
+        
+    code_end_time = time.time()
     start_time = time.time()
+    
     # instantiating project in openshot
     print("DEBUG: instantiating project!") 
     openshot = OpenshotProject(project_name="dark Knight rises")
@@ -68,8 +74,9 @@ def Submit(brief):
     end_time = time.time()
 
     total_time = end_time - start_time
-
-    print("Execution time: {:.2f} seconds".format(total_time))
+    code_total_time = code_end_time - code_start_time
+    print("Execution time of CODE    : {:.2f} mins".format(code_total_time/60))
+    print("Execution time of OPENSHOT: {:.2f} mins".format(total_time/60))
     return export_url  
     # return "http://3.7.77.20/media/video/output/49/output-49-33-74ffd716.mp4"
 

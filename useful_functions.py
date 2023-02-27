@@ -7,32 +7,23 @@ import pandas as pd
 from assets_handler import search_with_mindura_dwnld
 # import deplacy
 
-import spacy
-
 def keyword_extractor(text):
-    # Load the spaCy model for English
     nlp = spacy.load('en_core_web_sm')
-
-    # Tokenize the input text into sentences
     doc = nlp(text)
     big_sentences = [sent.text.strip() for sent in doc.sents]
-    # Keep track of covered words
-    seen = set()
+    #deplacy.render(doc)
 
-    # Initialize a list to store the extracted chunks
+    seen = set() # keep track of covered words
+
     Chunks = []
-
-    # Iterate over each sentence in the document
     for sent in doc.sents:
         if len(sent.text.split()) < 15:
             Chunks.append(sent)
         else:
             chunks=[]
         
-            # Identify the conjunction heads in the sentence
             heads = [cc for cc in sent.root.children if cc.dep_ == 'conj']
 
-            # Iterate over each conjunction head and extract its subtree
             for head in heads:
                 words = [ww for ww in head.subtree]
                 for word in words:
@@ -40,44 +31,37 @@ def keyword_extractor(text):
                 chunk = (' '.join([ww.text for ww in words]))
                 chunks.append( (head.i, chunk) )
 
-            # Extract the remaining words in the sentence that were not covered by any conjunction head
             unseen = [ww for ww in sent if ww not in seen]
             chunk = ' '.join([ww.text for ww in unseen])
             chunks.append( (sent.root.i, chunk) )
 
-            # Sort the extracted chunks by their position in the sentence
             chunks = sorted(chunks, key=lambda x: x[0])
 
-            # Append the chunks to the list of extracted chunks
             chunks= [c[1] for c in chunks]
+
             for item in chunks:
                 Chunks.append(item)
             Chunks=[str(c).strip() for c in Chunks]
 
-    # Initialize a list to store the extracted queries
     ordered_queries=[]
-
-    # Apply TextRank to each chunk and extract its keywords
     nlp.add_pipe("textrank")
     for s in Chunks:
         s=str(s)
         doc = nlp(s)
         container_of_keywords=[]
 
-        # If the chunk contains less than two keywords, use the chunk itself as the query
         if len(doc._.phrases)<2:
             if len(doc._.phrases)==1:
-                query=doc._.phrases[0].text
+                query={'sentence':s,'keyword1':doc._.phrases[0].text,'keyword2':doc._.phrases[0].text}
                 ordered_queries.append(query)
 
             else:
-                query=s
+                query={'sentence':s,'keyword1':s,'keyword2':s}
                 ordered_queries.append(query)
-        
-        # If the chunk contains two or more keywords, extract them and use them as the query
         else:  
             for phrase in doc._.phrases:
                 container_of_keywords.append(phrase.text)
+
 
                 if len(container_of_keywords)==2:
 
@@ -87,7 +71,6 @@ def keyword_extractor(text):
                     break
                     
     return ordered_queries
-
 
 def python_audio_generator(sentence, file_name):
     """
