@@ -14,6 +14,8 @@ def meta_consumer(myclips):
         print(position)
         print(clip.sentence,"\n\n")
         # openshot uploade media + create clips of it
+        openshot.Upload_clip_to_project(clip.caption,position=position,start=clip.start,end=clip.end,layer=3)
+        # openshot uploade media + create clips of it
         openshot.Upload_clip_to_project(clip.asset,position=position,start=clip.start,end=clip.end,layer=2)
         # openshot uploade audio  + create clips of it
         openshot.Upload_clip_to_project(clip.tts,position=position,start=clip.start,end=clip.end,layer=1)
@@ -36,6 +38,6 @@ if __name__ == "__main__":
     json_data = json.loads(data)
     myclips=[]
     for key,e in json_data.items():
-        clip = monClip(e["SENTENCE"], e["MEDIA_ASSET"]["keyword"], e["TTS"]["audio_file_path"], e["MEDIA_ASSET"]["file_path"], e["TTS"]["audio_length"])
+        clip = monClip(e["SENTENCE"], e["MEDIA_ASSET"]["keyword"], e["TTS"]["audio_file_path"],e["CAPTION_path"], e["MEDIA_ASSET"]["file_path"], e["TTS"]["audio_length"])
         myclips.append(clip)
     export_url = meta_consumer(myclips)

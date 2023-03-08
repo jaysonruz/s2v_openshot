@@ -3,7 +3,7 @@ from useful_functions import python_audio_generator
 from assets_handler import search_with_mindura_dwnld,fetch_and_download_image
 from kwd_scraper import Keyword_extractor_free # <-----------------------------jugad
 import json
-
+from captiongen import create_svg_file
 def meta_Creator(text):
     meta_dict = {}
     sentences = break_sentences_split(text)
@@ -14,6 +14,9 @@ def meta_Creator(text):
         # return dict containing meta information of tts
         tts_dict=python_audio_generator(sentence,f"speech_{i}")
         
+        # return dict containing meta information of captions
+        caption_svg_file = create_svg_file(sentence)
+         
         # fetching appropriate video assets
         asset_dict=None
         for keyword in keywords[:1]:
@@ -33,7 +36,7 @@ def meta_Creator(text):
                 else:
                     print(f"DEBUG: KEYWORD chosen for image: {keyword}")
                     break 
-        meta_dict[i]={"SENTENCE":sentence,"KEYWORDS":keywords,"TTS":tts_dict,"MEDIA_ASSET":asset_dict}
+        meta_dict[i]={"SENTENCE":sentence,"KEYWORDS":keywords,"TTS":tts_dict,"CAPTION_path":caption_svg_file,"MEDIA_ASSET":asset_dict}
         
     # Save the dictionary as a JSON file in the current directory
     with open("meta_dict.json", "w") as outfile:

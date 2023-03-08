@@ -1,1 +1,163 @@
-{"0": {"SENTENCE": "In 2023, farming and agriculture continue to be critical industries for food security and economic growth around the world.", "KEYWORDS": ["farming and agriculture", "agriculture continue", "critical industries", "industries for food", "food security"], "TTS": {"file_name": "speech_0", "audio_file_path": "audio\\speech_0.mp3", "audio_length": 6.87}, "MEDIA_ASSET": {"duration": 46, "size": "1920X1920", "link": "https://player.vimeo.com/external/435582428.hd.mp4?s=fc8d811219b1a7c179059da031d3319308af6ee0&profile_id=175&oauth2_token_id=57447761", "file_path": "media_assets\\183b42c2-a32b-4bc1-ab38-5154fdead50a.mp4", "keyword": "farming and agriculture"}}, "1": {"SENTENCE": "However, these industries are facing significant challenges, including climate change, water scarcity, and labor shortages.", "KEYWORDS": ["including climate change", "facing significant challenges", "water scarcity", "significant challenges", "including climate"], "TTS": {"file_name": "speech_1", "audio_file_path": "audio\\speech_1.mp3", "audio_length": 6.88}, "MEDIA_ASSET": {"duration": 24, "size": "3840X3840", "link": "https://player.vimeo.com/external/414879100.hd.mp4?s=18d18edc8925fcf15c38682879b26cca2e22a194&profile_id=172&oauth2_token_id=57447761", "file_path": "media_assets\\16fbbfee-62a6-4129-83ee-88c4b6dcc8b6.mp4", "keyword": "including climate change"}}, "2": {"SENTENCE": "To address these challenges, farmers and agricultural organizations are adopting new technologies and practices to increase efficiency and sustainability.", "KEYWORDS": ["address these challenges", "farmers and agricultural", "efficiency and sustainability", "agricultural organizations", "organizations are adopting"], "TTS": {"file_name": "speech_2", "audio_file_path": "audio\\speech_2.mp3", "audio_length": 7.66}, "MEDIA_ASSET": {"duration": 9, "size": "3840X3840", "link": "https://player.vimeo.com/external/373983931.hd.mp4?s=b1cb379728da5e91826347d1aa61df3d971cc675&profile_id=173&oauth2_token_id=57447761", "file_path": "media_assets\\379b09c8-b82c-4cd4-8180-df5036078a86.mp4", "keyword": "address these challenges"}}, "3": {"SENTENCE": "For example, precision agriculture uses sensors, drones, and other technologies to optimize crop yields and reduce waste.", "KEYWORDS": ["optimize crop yields", "precision agriculture", "agriculture uses sensors", "reduce waste", "technologies to optimize"], "TTS": {"file_name": "speech_3", "audio_file_path": "audio\\speech_3.mp3", "audio_length": 7.26}, "MEDIA_ASSET": {"duration": 21, "size": "1920X1920", "link": "https://player.vimeo.com/external/418600800.hd.mp4?s=16ce95406e980d40c5d835cb5dd1a4c7d91d507a&profile_id=175&oauth2_token_id=57447761", "file_path": "media_assets\\925aee0c-2e75-497c-8cf6-1b5d84ee021f.mp4", "keyword": "optimize crop yields"}}, "4": {"SENTENCE": "Vertical farming and hydroponics are also gaining popularity as ways to grow crops in urban areas with limited space and resources.", "KEYWORDS": ["Vertical farming", "space and resources", "farming and hydroponics", "gaining popularity", "grow crops"], "TTS": {"file_name": "speech_4", "audio_file_path": "audio\\speech_4.mp3", "audio_length": 6.58}, "MEDIA_ASSET": {"duration": 11, "size": "3840X3840", "link": "https://player.vimeo.com/external/451887292.hd.mp4?s=3a3b421738e392818ca950b515d7edd5bfc6e7e0&profile_id=172&oauth2_token_id=57447761", "file_path": "media_assets\\460b2c5c-0708-48af-a38d-955ddc8bdccf.mp4", "keyword": "Vertical farming"}}, "5": {"SENTENCE": "Sustainability is also a top priority for many farmers and agricultural organizations.", "KEYWORDS": ["agricultural organizations", "top priority", "farmers and agricultural", "Sustainability", "organizations"], "TTS": {"file_name": "speech_5", "audio_file_path": "audio\\speech_5.mp3", "audio_length": 4.87}, "MEDIA_ASSET": {"duration": 11, "size": "1920X1920", "link": "https://player.vimeo.com/external/535641615.hd.mp4?s=5439aa1719ea8c1c338dd8d14817a8ec850ac443&profile_id=175&oauth2_token_id=57447761", "file_path": "media_assets\\712ad259-4ecb-4329-9905-76bda35fcf8e.mp4", "keyword": "agricultural organizations"}}, "6": {"SENTENCE": "They are working to reduce their carbon footprint by using renewable energy sources, reducing waste and pollution, and conserving natural resources.", "KEYWORDS": ["renewable energy sources", "conserving natural resources", "energy sources", "reducing waste", "waste and pollution"], "TTS": {"file_name": "speech_6", "audio_file_path": "audio\\speech_6.mp3", "audio_length": 7.4}, "MEDIA_ASSET": {"duration": 18, "size": "3840X3840", "link": "https://player.vimeo.com/external/392003415.hd.mp4?s=f59d40d8017fe32d99c0fa3bc90788c1a277ae22&profile_id=173&oauth2_token_id=57447761", "file_path": "media_assets\\1e7bf5a9-201d-4b3e-8169-8f11aa010a54.mp4", "keyword": "renewable energy sources"}}}
+{
+    "0": {
+        "SENTENCE": "In 2023, farming and agriculture continue to be critical industries for food security and economic growth around the world.",
+        "KEYWORDS": [
+            "farming and agriculture",
+            "agriculture continue",
+            "critical industries",
+            "industries for food",
+            "food security"
+        ],
+        "TTS": {
+            "file_name": "speech_0",
+            "audio_file_path": "audio\\speech_0.mp3",
+            "audio_length": 6.87
+        },
+        "CAPTION_path": "caption_assets\\07562283-a1b3-4f68-ae49-d232ccb91a68.svg",
+        "MEDIA_ASSET": {
+            "duration": 46,
+            "size": "1920X1920",
+            "link": "https://player.vimeo.com/external/435582428.hd.mp4?s=fc8d811219b1a7c179059da031d3319308af6ee0&profile_id=175&oauth2_token_id=57447761",
+            "file_path": "media_assets\\fea9e925-b910-45b8-b0d4-f209c3c21641.mp4",
+            "keyword": "farming and agriculture"
+        }
+    },
+    "1": {
+        "SENTENCE": "However, these industries are facing significant challenges, including climate change, water scarcity, and labor shortages.",
+        "KEYWORDS": [
+            "including climate change",
+            "facing significant challenges",
+            "water scarcity",
+            "significant challenges",
+            "including climate"
+        ],
+        "TTS": {
+            "file_name": "speech_1",
+            "audio_file_path": "audio\\speech_1.mp3",
+            "audio_length": 6.88
+        },
+        "CAPTION_path": "caption_assets\\11e379d6-5129-4e68-b555-4827c9571c7a.svg",
+        "MEDIA_ASSET": {
+            "duration": 24,
+            "size": "3840X3840",
+            "link": "https://player.vimeo.com/external/414879100.hd.mp4?s=18d18edc8925fcf15c38682879b26cca2e22a194&profile_id=172&oauth2_token_id=57447761",
+            "file_path": "media_assets\\6479370d-de80-4fad-b6df-99b3e5e25795.mp4",
+            "keyword": "including climate change"
+        }
+    },
+    "2": {
+        "SENTENCE": "To address these challenges, farmers and agricultural organizations are adopting new technologies and practices to increase efficiency and sustainability.",
+        "KEYWORDS": [
+            "address these challenges",
+            "farmers and agricultural",
+            "efficiency and sustainability",
+            "agricultural organizations",
+            "organizations are adopting"
+        ],
+        "TTS": {
+            "file_name": "speech_2",
+            "audio_file_path": "audio\\speech_2.mp3",
+            "audio_length": 7.66
+        },
+        "CAPTION_path": "caption_assets\\24f5e3fa-bd49-4ef3-a56a-f08d1aa8b778.svg",
+        "MEDIA_ASSET": {
+            "duration": 9,
+            "size": "3840X3840",
+            "link": "https://player.vimeo.com/external/373983931.hd.mp4?s=b1cb379728da5e91826347d1aa61df3d971cc675&profile_id=173&oauth2_token_id=57447761",
+            "file_path": "media_assets\\0aadb635-9423-480d-8952-fdb1cc43e0c4.mp4",
+            "keyword": "address these challenges"
+        }
+    },
+    "3": {
+        "SENTENCE": "For example, precision agriculture uses sensors, drones, and other technologies to optimize crop yields and reduce waste.",
+        "KEYWORDS": [
+            "optimize crop yields",
+            "precision agriculture",
+            "agriculture uses sensors",
+            "reduce waste",
+            "technologies to optimize"
+        ],
+        "TTS": {
+            "file_name": "speech_3",
+            "audio_file_path": "audio\\speech_3.mp3",
+            "audio_length": 7.26
+        },
+        "CAPTION_path": "caption_assets\\3f10d8f9-d384-42d4-bae3-76fe862dae58.svg",
+        "MEDIA_ASSET": {
+            "duration": 21,
+            "size": "1920X1920",
+            "link": "https://player.vimeo.com/external/418600800.hd.mp4?s=16ce95406e980d40c5d835cb5dd1a4c7d91d507a&profile_id=175&oauth2_token_id=57447761",
+            "file_path": "media_assets\\2083b3e9-8495-456e-b9a7-36455ecd041f.mp4",
+            "keyword": "optimize crop yields"
+        }
+    },
+    "4": {
+        "SENTENCE": "Vertical farming and hydroponics are also gaining popularity as ways to grow crops in urban areas with limited space and resources.",
+        "KEYWORDS": [
+            "Vertical farming",
+            "space and resources",
+            "farming and hydroponics",
+            "gaining popularity",
+            "grow crops"
+        ],
+        "TTS": {
+            "file_name": "speech_4",
+            "audio_file_path": "audio\\speech_4.mp3",
+            "audio_length": 6.58
+        },
+        "CAPTION_path": "caption_assets\\95ec68cf-8281-4869-8c1c-19795ce0e9e5.svg",
+        "MEDIA_ASSET": {
+            "duration": 11,
+            "size": "3840X3840",
+            "link": "https://player.vimeo.com/external/451887292.hd.mp4?s=3a3b421738e392818ca950b515d7edd5bfc6e7e0&profile_id=172&oauth2_token_id=57447761",
+            "file_path": "media_assets\\1ea842d8-3db7-465c-af0c-e8f0dd3e311f.mp4",
+            "keyword": "Vertical farming"
+        }
+    },
+    "5": {
+        "SENTENCE": "Sustainability is also a top priority for many farmers and agricultural organizations.",
+        "KEYWORDS": [
+            "agricultural organizations",
+            "top priority",
+            "farmers and agricultural",
+            "Sustainability",
+            "organizations"
+        ],
+        "TTS": {
+            "file_name": "speech_5",
+            "audio_file_path": "audio\\speech_5.mp3",
+            "audio_length": 4.87
+        },
+        "CAPTION_path": "caption_assets\\33769aaa-d3a3-40ea-bd0d-12e27fc2f501.svg",
+        "MEDIA_ASSET": {
+            "duration": 11,
+            "size": "1920X1920",
+            "link": "https://player.vimeo.com/external/535641615.hd.mp4?s=5439aa1719ea8c1c338dd8d14817a8ec850ac443&profile_id=175&oauth2_token_id=57447761",
+            "file_path": "media_assets\\929b8b7c-5a3d-4786-bc04-caaafe39d6ef.mp4",
+            "keyword": "agricultural organizations"
+        }
+    },
+    "6": {
+        "SENTENCE": "They are working to reduce their carbon footprint by using renewable energy sources, reducing waste and pollution, and conserving natural resources.",
+        "KEYWORDS": [
+            "renewable energy sources",
+            "conserving natural resources",
+            "energy sources",
+            "reducing waste",
+            "waste and pollution"
+        ],
+        "TTS": {
+            "file_name": "speech_6",
+            "audio_file_path": "audio\\speech_6.mp3",
+            "audio_length": 7.4
+        },
+        "CAPTION_path": "caption_assets\\aa8d050a-ad9b-48d2-8496-8a22efd27899.svg",
+        "MEDIA_ASSET": {
+            "duration": 18,
+            "size": "3840X3840",
+            "link": "https://player.vimeo.com/external/392003415.hd.mp4?s=f59d40d8017fe32d99c0fa3bc90788c1a277ae22&profile_id=173&oauth2_token_id=57447761",
+            "file_path": "media_assets\\96b645ad-a0d5-410b-a247-d1c09f744e1a.mp4",
+            "keyword": "renewable energy sources"
+        }
+    }
+}
