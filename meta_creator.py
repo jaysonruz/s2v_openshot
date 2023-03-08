@@ -1,6 +1,7 @@
 from Keyword_extractor_paid import Keyword_extractor_paid,break_sentences_split
 from useful_functions import python_audio_generator
 from assets_handler import search_with_mindura_dwnld,fetch_and_download_image
+from kwd_scraper import Keyword_extractor_free # <-----------------------------jugad
 import json
 
 def meta_Creator(text):
@@ -8,18 +9,19 @@ def meta_Creator(text):
     sentences = break_sentences_split(text)
     for i,sentence in enumerate(sentences):
         # returns list of 5 keywords
-        keywords = Keyword_extractor_paid(sentence)
-        
+        keywords = Keyword_extractor_free(sentence)
+        print(f"DEBUG: KEYWORDS-> {keywords}")
         # return dict containing meta information of tts
         tts_dict=python_audio_generator(sentence,f"speech_{i}")
         
         # fetching appropriate video assets
         asset_dict=None
-        for keyword in keywords:
+        for keyword in keywords[:1]:
             asset_dict = search_with_mindura_dwnld(keyword,min_duration=tts_dict['audio_length'])
             if asset_dict is None:
                 continue
             else:
+                print(f"DEBUG: KEYWORD chosen for video: {keyword}")
                 break
         
         # fetching appropriate image assets    
@@ -29,6 +31,7 @@ def meta_Creator(text):
                 if asset_dict is None:
                     continue
                 else:
+                    print(f"DEBUG: KEYWORD chosen for image: {keyword}")
                     break 
         meta_dict[i]={"SENTENCE":sentence,"KEYWORDS":keywords,"TTS":tts_dict,"MEDIA_ASSET":asset_dict}
         
