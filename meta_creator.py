@@ -44,9 +44,52 @@ def meta_Creator(text):
     return meta_dict
 
 if __name__ == "__main__":
-    input_text = """In 2023, farming and agriculture continue to be critical industries for food security and economic growth around the world. However, these industries are facing significant challenges, including climate change, water scarcity, and labor shortages.
-To address these challenges, farmers and agricultural organizations are adopting new technologies and practices to increase efficiency and sustainability. For example, precision agriculture uses sensors, drones, and other technologies to optimize crop yields and reduce waste. Vertical farming and hydroponics are also gaining popularity as ways to grow crops in urban areas with limited space and resources.
-Sustainability is also a top priority for many farmers and agricultural organizations. They are working to reduce their carbon footprint by using renewable energy sources, reducing waste and pollution, and conserving natural resources.
-"""
+    input_text = """She'd take the world off my shoulders
+If it was ever hard to move.
+She'd turn the rain to a rainbow
+When I was living in the blue.
+Why then, if she is so perfect
+Do I still wish that it was you?.
+Perfect don't mean that it's working
+So what can I do? (Ooh).
+When you're out of sight
+In my mind.
+'Cause sometimes I look in her eyes
+And that's where I find a glimpse of us.
+And I try to fall for her touch
+But I'm thinking of the way it was.
+Said I'm fine and said I moved on
+I'm only here passing time in her arms.
+Hoping I'll find
+A glimpse of us
+Tell me he savors your glory.
+Does he laugh the way I did?
+Is this a part of your story?
+One that I had never lived.
+Maybe one day you'll feel lonely
+And in his eyes, you'll get a glimpse.
+Maybe you'll start slipping slowly
+And find me again
+When you're out of sight.
+In my mind
+'Cause sometimes I look in her eyes.
+And that's where I find a glimpse of us
+And I try to fall for her touch
+But I'm thinking of the way it was.
+Said I'm fine and said I moved on
+I'm only here passing time in her arms
+Hoping I'll find.
+A glimpse of us
+Ooh, ooh-ooh
+Ooh, ooh-ooh
+Ooh, ooh, ooh
+'Cause sometimes I look in her eyes
+And that's where I find a glimpse of us.
+And I try to fall for her touch
+But I'm thinking of the way it was
+Said I'm fine and said I moved on.
+I'm only here passing time in her arms
+Hoping I'll find
+A glimpse of us."""
     meta_json = meta_Creator(input_text)
     print(meta_json)

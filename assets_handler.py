@@ -37,11 +37,14 @@ def download_image(url,folder):
 
 def fetch_and_download_image(query):
     url = fetch_landscape_image(query)
-    file_path=download_image(url,"media_assets")
-    result = {'link': url,
-     'file_path': file_path ,
-     'keyword': query}
-    return result
+    if url != None:
+        file_path=download_image(url,"media_assets")
+        result = {'link': url,
+        'file_path': file_path ,
+        'keyword': query}
+        return result
+    else:
+        return None
 
 def search_videos(query):
     url = "https://api.pexels.com/videos/search"
@@ -126,9 +129,9 @@ def search_with_mindura_dwnld(query,min_duration):
     return None
 
 if __name__ == "__main__":
-    result=search_with_mindura_dwnld("cats",1)
+    result=search_with_mindura_dwnld("start slipping slowly",1)
     print(result)
-    photos=fetch_and_download_image("Cat")
-    print(photos)
+    # photos=fetch_and_download_image("start slipping slowly")
+    # print(photos)
     
     
