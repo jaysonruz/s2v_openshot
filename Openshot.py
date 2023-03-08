@@ -46,7 +46,7 @@ class OpenshotProject:
       file_data = {
           "media": None,
           "project": self.project_url,
-          "json": "{}"
+          "json": '{"volume": 0}'
       }
       r = post(self.CLOUD_URL + end_point, data=file_data, \
                files={"media": (source_name, open(source_path, "rb"))}, auth=self.CLOUD_AUTH)
@@ -54,7 +54,7 @@ class OpenshotProject:
       print(f"DEBUG: file_url: {file_url}")
       # print(r.json())
     ##########################################################
-      # Create a clip for the previously uploaded file
+      # Create a clip from the previously uploaded file
       end_point = '/projects/%s/clips/' % self.project_id
       clip_data = {
           "file": file_url,
@@ -63,7 +63,7 @@ class OpenshotProject:
           "end": end,
           "layer": layer,
           "project": self.project_url,
-          "json": "{}"
+          "json": '{}',
       }
       r = post(self.CLOUD_URL + end_point, data=clip_data, auth=self.CLOUD_AUTH)
       # print(r.json())
@@ -113,7 +113,7 @@ if __name__ =="__main__":
   openshot = OpenshotProject(project_name="bombay1_project")
 
   # media file path
-  media_file = r'media_assets\\the race.mp4'
+  media_file = r'F:\21NProjects\s2v_openshot\media_assets\bac6c36f-b132-4bde-9b36-308726d5522e.mp4'
 
   # openshot uploade media + create clips of it
   openshot.Upload_clip_to_project(media_file,position=10,start=0,end=40)
