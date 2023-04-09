@@ -1,0 +1,179 @@
+{
+    "0": {
+        "SENTENCE": "A desert is defined as an area that receives less than 10 inches (25 cm) of rainfall annually.",
+        "KEYWORDS": [
+            "inches",
+            "rainfall annually",
+            "desert is defined",
+            "area that receives",
+            "annually"
+        ],
+        "TTS": {
+            "file_name": "speech_0",
+            "audio_file_path": "audio\\speech_0.mp3",
+            "audio_length": 6.25
+        },
+        "CAPTION_path": "caption_assets\\13760667-e32c-49e1-b597-6495896cab20.svg",
+        "MEDIA_ASSET": {
+            "link": "https://images.pexels.com/photos/1616001/pexels-photo-1616001.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+            "file_path": "media_assets\\a4cb1a59-4e81-4196-a9c3-0eb6dd338957.jpeg",
+            "keyword": "inches"
+        }
+    },
+    "1": {
+        "SENTENCE": "Deserts cover twenty percent of the territory on Earth.",
+        "KEYWORDS": [
+            "Deserts cover twenty",
+            "territory on Earth",
+            "cover twenty percent",
+            "Deserts cover",
+            "Earth"
+        ],
+        "TTS": {
+            "file_name": "speech_1",
+            "audio_file_path": "audio\\speech_1.mp3",
+            "audio_length": 3.07
+        },
+        "CAPTION_path": "caption_assets\\6abc6f85-badc-448d-82e6-f53cfb839c82.svg",
+        "MEDIA_ASSET": {
+            "duration": 20,
+            "size": "3840X3840",
+            "link": "https://player.vimeo.com/external/339958040.hd.mp4?s=1f3edeea5c97ea41063811c338109be14cb16673&profile_id=172&oauth2_token_id=57447761",
+            "file_path": "media_assets\\5e9cc02e-3d1b-4ae3-821a-67d966b8ee34.mp4",
+            "keyword": "Deserts cover twenty"
+        }
+    },
+    "2": {
+        "SENTENCE": "They are found on every continent.",
+        "KEYWORDS": [
+            "continent",
+            "found"
+        ],
+        "TTS": {
+            "file_name": "speech_2",
+            "audio_file_path": "audio\\speech_2.mp3",
+            "audio_length": 2.04
+        },
+        "CAPTION_path": "caption_assets\\a5046c4f-addb-4d70-9a4a-a5b9d5a4fba0.svg",
+        "MEDIA_ASSET": {
+            "duration": 16,
+            "size": "3840X3840",
+            "link": "https://player.vimeo.com/external/314181352.hd.mp4?s=03e7a8ddba6566f8a62cd7f8a8da7d79461c3dbd&profile_id=172&oauth2_token_id=57447761",
+            "file_path": "media_assets\\ef3a8139-0366-476d-9e67-d17a1b78e14d.mp4",
+            "keyword": "continent"
+        }
+    },
+    "3": {
+        "SENTENCE": "The land features of deserts vary widely.",
+        "KEYWORDS": [
+            "deserts vary widely",
+            "vary widely",
+            "land features",
+            "features of deserts",
+            "deserts vary"
+        ],
+        "TTS": {
+            "file_name": "speech_3",
+            "audio_file_path": "audio\\speech_3.mp3",
+            "audio_length": 2.46
+        },
+        "CAPTION_path": "caption_assets\\ae57a13f-d218-43b1-87c6-2c06b508e846.svg",
+        "MEDIA_ASSET": {
+            "duration": 20,
+            "size": "1920X1920",
+            "link": "https://player.vimeo.com/external/365471710.hd.mp4?s=d991fb487e8e3b3cc26d8d065300f83454215757&profile_id=175&oauth2_token_id=57447761",
+            "file_path": "media_assets\\706547d6-18a4-45dc-bc43-2ac41f47874d.mp4",
+            "keyword": "deserts vary widely"
+        }
+    },
+    "4": {
+        "SENTENCE": "They could consist of mountains, bare rock, rocky plains, and moving dunes.",
+        "KEYWORDS": [
+            "bare rock",
+            "rocky plains",
+            "consist of mountains",
+            "moving dunes",
+            "mountains"
+        ],
+        "TTS": {
+            "file_name": "speech_4",
+            "audio_file_path": "audio\\speech_4.mp3",
+            "audio_length": 4.09
+        },
+        "CAPTION_path": "caption_assets\\1e105c28-4ed9-4da4-9da2-dd950baf6136.svg",
+        "MEDIA_ASSET": {
+            "duration": 22,
+            "size": "1920X1920",
+            "link": "https://player.vimeo.com/external/370670471.hd.mp4?s=59c71bd0517217c633e3c77335bf02c1b816021f&profile_id=175&oauth2_token_id=57447761",
+            "file_path": "media_assets\\8698416b-9bdf-4018-91ab-c0ca11262ba1.mp4",
+            "keyword": "bare rock"
+        }
+    },
+    "5": {
+        "SENTENCE": "Contrary to popular belief, dunes are not as common in deserts.",
+        "KEYWORDS": [
+            "Contrary to popular",
+            "popular belief",
+            "common in deserts",
+            "Contrary",
+            "belief"
+        ],
+        "TTS": {
+            "file_name": "speech_5",
+            "audio_file_path": "audio\\speech_5.mp3",
+            "audio_length": 3.89
+        },
+        "CAPTION_path": "caption_assets\\d5f3091a-95ab-4d72-b33f-1ac4e1ce98f8.svg",
+        "MEDIA_ASSET": {
+            "duration": 11,
+            "size": "3840X3840",
+            "link": "https://player.vimeo.com/external/484400309.hd.mp4?s=25fbe9fe0ff63e1874a95450ab28cbea49b70d00&profile_id=172&oauth2_token_id=57447761",
+            "file_path": "media_assets\\6f874bc8-72a4-4c20-9210-5354b59fdfbd.mp4",
+            "keyword": "Contrary to popular"
+        }
+    },
+    "6": {
+        "SENTENCE": "For instance, they only account for 10% of the Sahara in northern Africa.",
+        "KEYWORDS": [
+            "northern Africa",
+            "Sahara in northern",
+            "Africa",
+            "Sahara",
+            "instance"
+        ],
+        "TTS": {
+            "file_name": "speech_6",
+            "audio_file_path": "audio\\speech_6.mp3",
+            "audio_length": 4.41
+        },
+        "CAPTION_path": "caption_assets\\6e955767-068c-435d-86a8-b8d1fbc16c03.svg",
+        "MEDIA_ASSET": {
+            "duration": 11,
+            "size": "3840X3840",
+            "link": "https://player.vimeo.com/external/468459107.hd.mp4?s=c925bc5ca98937a4c9fe51eff850be793f41663a&profile_id=172&oauth2_token_id=57447761",
+            "file_path": "media_assets\\93431c6d-a97e-4b7f-98b6-dc8f507d551b.mp4",
+            "keyword": "northern Africa"
+        }
+    },
+    "7": {
+        "SENTENCE": "Not all deserts have camels.",
+        "KEYWORDS": [
+            "deserts have camels",
+            "camels",
+            "deserts"
+        ],
+        "TTS": {
+            "file_name": "speech_7",
+            "audio_file_path": "audio\\speech_7.mp3",
+            "audio_length": 2.01
+        },
+        "CAPTION_path": "caption_assets\\b96f06ba-7d57-4a10-a881-3750ece76630.svg",
+        "MEDIA_ASSET": {
+            "duration": 4,
+            "size": "1920X1920",
+            "link": "https://player.vimeo.com/external/326064372.hd.mp4?s=a7ac162189cc17e2ca548d7159b5cbceac8758fd&profile_id=169&oauth2_token_id=57447761",
+            "file_path": "media_assets\\4a97ee9c-fb40-42e0-b54b-df35e6253f12.mp4",
+            "keyword": "deserts have camels"
+        }
+    }
+}
